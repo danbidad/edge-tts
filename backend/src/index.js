@@ -76,7 +76,7 @@ async function cleanupOldFiles() {
 }
 
 app.post('/tts', async (req, res) => {
-    const { text, voice, rate = '0%' } = req.body;
+    const { text, voice, rate = '+0%' } = req.body;
 
     if (!text || !voice) {
         return res.status(400).json({ error: 'text와 voice 파라미터가 필요합니다.' });

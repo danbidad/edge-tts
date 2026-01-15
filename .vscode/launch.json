@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "NPM: Backend",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "b:dev"
+            ],
+            "cwd": "${workspaceFolder}/backend",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "NPM: Frontend",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "f:dev"
+            ],
+            "cwd": "${workspaceFolder}/frontend",
+            "console": "integratedTerminal"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Full Stack Run",
+            "configurations": [
+                "NPM: Backend",
+                "NPM: Frontend"
+            ]
+        }
+    ]
+}

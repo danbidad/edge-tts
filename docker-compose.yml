@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  edge-tts-backend:
+    container_name: edge-tts-backend
+    build: ./backend
+    ports:
+      - "3000:3000"
+      - "9300:9300"
+    volumes:
+      - ./backend:/work/app
+      - /work/app/node_modules
+    environment:
+      - DATABASE_URL=file:./data/sqlite.db

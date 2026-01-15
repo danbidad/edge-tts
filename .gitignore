@@ -7,18 +7,21 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+backend/public
 node_modules
 dist
 dist-ssr
 *.local
+._*
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
 .idea
+.venv
 .DS_Store
+.*cache
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+tailwind_temp.css
