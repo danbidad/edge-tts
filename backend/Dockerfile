@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:20-alpine
 
 WORKDIR /work
 
@@ -10,4 +10,4 @@ EXPOSE 9300
 
 WORKDIR /work/app
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "b:dev"]
